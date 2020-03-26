@@ -32,7 +32,7 @@
 		0BC920C01F8E73C828F2181E /* Pods_WRRuntime_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRRuntime_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31E9FEF77EB0F81D80810875 /* Pods-WRRuntime_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRRuntime_Example.release.xcconfig"; path = "Target Support Files/Pods-WRRuntime_Example/Pods-WRRuntime_Example.release.xcconfig"; sourceTree = "<group>"; };
 		486760BFC66E0F3E5C42945E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		4C07792B4389A181E9CC262C /* WRRuntime.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WRRuntime.podspec; path = ../WRRuntime.podspec; sourceTree = "<group>"; };
+		4C07792B4389A181E9CC262C /* WRRuntime.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WRRuntime.podspec; path = ../WRRuntime.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* WRRuntime_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WRRuntime_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
