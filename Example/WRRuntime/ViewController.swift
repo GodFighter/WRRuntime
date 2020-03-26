@@ -9,17 +9,15 @@
 import UIKit
 import WRRuntime
 
-class Test: WRRuntimeProtocol {
-    var age = 0
-    
-    public static var wr_swizzleMethods = [(#selector(test1), #selector(test2))]
+class Dog: WRRuntimeProtocol {
+    public static var wr_swizzleMethods = [(#selector(eating), #selector(eatUp))]
 
-    @objc dynamic func test1() {
-        print("test == 1")
+    @objc dynamic func eating() {
+        print("dog is eating")
     }
 
-    @objc dynamic func test2() {
-        print("test == 2")
+    @objc dynamic func eatUp() {
+        print("dog is eat up")
     }
 }
 
@@ -29,8 +27,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additi
 
-        let test = Test()
-        test.test1()
+        let dog = Dog()
+        dog.eating()
     }
 
     override func didReceiveMemoryWarning() {
