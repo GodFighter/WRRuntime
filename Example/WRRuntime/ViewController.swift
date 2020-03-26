@@ -9,28 +9,17 @@
 import UIKit
 import WRRuntime
 
-//class Dog: WRRuntimeProtocol {
-//    public static var wr_swizzleMethods = [(#selector(eating), #selector(eatUp))]
-//
-//    @objc dynamic func eating() {
-//        print("dog is eating")
-//    }
-//
-//    @objc dynamic func eatUp() {
-//        print("dog is eat up")
-//    }
-//}
+class Dog: WRRuntimeProtocol {
+    public static var wr_swizzleMethods = [(#selector(eating), #selector(eatUp))]
 
-extension UITableView: WRRuntimeProtocol {
-    public static var wr_swizzleMethods = [(#selector(reloadData), #selector(wr_reloadData))]
-    
-    @objc public dynamic func wr_reloadData() {
-        print("123456")
+    @objc dynamic func eating() {
+        print("dog is eating")
     }
-    
 
+    @objc dynamic func eatUp() {
+        print("dog is eat up")
+    }
 }
-
 
 class ViewController: UIViewController {
 
@@ -38,12 +27,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additi
 
-//        let dog = Dog()
-//        dog.eating()
+        let dog = Dog()
+        dog.eating()
         
-        let tableView = UITableView()
-        tableView.reloadData()
-
     }
 
     override func didReceiveMemoryWarning() {
