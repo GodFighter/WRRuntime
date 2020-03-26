@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'WRRuntime_Example' do
+  pod 'WRRuntime', :path => '../'
+
+  target 'WRRuntime_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
