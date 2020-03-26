@@ -27,25 +27,7 @@ extension WRRuntimeProtocol {
 
     public static func wr_exchangeMethod(selector: Selector, replace: Selector, class classType: AnyClass) {
         
-        let select1 = selector
-        let select2 = replace
-        let select1Method = class_getInstanceMethod(classType, select1)
-        let select2Method = class_getInstanceMethod(classType, select2)
-        guard (select1Method != nil && select2Method != nil) else {
-            return
-        }
-        let didAddMethod  = class_addMethod(classType,
-                                            select1,
-                                            method_getImplementation(select2Method!),
-                                            method_getTypeEncoding(select2Method!))
-        if didAddMethod {
-            class_replaceMethod(classType,
-                                select2,
-                                method_getImplementation(select1Method!),
-                                method_getTypeEncoding(select1Method!))
-        }else {
-            method_exchangeImplementations(select1Method!, select2Method!)
-        }
+        method_exchangeImplementations(class_getInstanceMethod(classType, selector)!, class_getInstanceMethod(classType, replace)!)
     }
 
     public static func wr_methods(from classType: AnyClass) -> [Method] {
