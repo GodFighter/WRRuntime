@@ -94,14 +94,8 @@ class WRNothingToSeeHere {
 }
 
 extension UIApplication {
-    private static let wt_runOnce: Void = {
+    public static let wr_runOnce: Void = {
         WRNothingToSeeHere.harmlessFunction()
     }()
-    
-    override open var next: UIResponder? {
-        // Called before applicationDidFinishLaunching
-        UIApplication.wt_runOnce
-        return super.next
-    }
 }
 

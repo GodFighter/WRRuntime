@@ -41,6 +41,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    override open var next: UIResponder? {
+        // Called before applicationDidFinishLaunching
+        UIApplication.wr_runOnce
+        return super.next
+    }
+
 
 }
 
